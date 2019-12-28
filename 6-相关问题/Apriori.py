@@ -200,14 +200,20 @@ rules=generateRules(L,suppData,0.7)
 print(rules)
 
 
-# In[ ]:
-
-
 
 
 
 # In[ ]:
+def main():
+    mushDatSet=[line.split() for line in open ('mushroom.dat').readlines()]
+    L,suppData=apriori(mushDatSet,0.3)
+    for item in L[1]:
+        if item.intersection('2'):
+            print(item)
 
+
+# In[ ]:
+main()
 
 
 

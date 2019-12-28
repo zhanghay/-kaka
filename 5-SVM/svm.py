@@ -297,6 +297,7 @@ def img2vector(filename):
 	"""
 	returnVect = np.zeros((1,1024))
 	fr = open(filename)
+	
 	for i in range(32):
 		lineStr = fr.readline()
 		for j in range(32):
